@@ -9,10 +9,15 @@ public class MissleLauncher : MonoBehaviour {
 	public Transform firePosition;
 	public GameObject bullet;
 
+	//sounds
+	public GameObject Sounds;
+	Sounds sounds;
+
 
 	// Use this for initialization
 	void Start () {
 		character = GetComponent<Character> ();
+		sounds = Sounds.GetComponent <Sounds> ();
 	}
 	
 	// Update is called once per frame
@@ -30,6 +35,8 @@ public class MissleLauncher : MonoBehaviour {
 			} else {
 				Instantiate (bullet, firePosition.position, Quaternion.Euler (new Vector3 (0, 0, 180f)));
 			}
+			sounds.doRocketfire ();
+			sounds.doRocketAir ();
 		}
 	}
 		

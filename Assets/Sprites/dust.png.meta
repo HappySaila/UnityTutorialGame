@@ -1,0 +1,227 @@
+fileFormatVersion: 2
+guid: 6c0eb8a92d6d944908e087e20de3bca8
+timeCreated: 1478341259
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: dust_0
+    21300002: dust_1
+    21300004: dust_2
+    21300006: dust_3
+    21300008: dust_4
+    21300010: dust_5
+    21300012: dust_6
+    21300014: dust_7
+    21300016: dust_8
+    21300018: dust_9
+    21300020: dust_10
+    21300022: dust_11
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dust_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 291
+        width: 83
+        height: 54
+      alignment: 9
+      pivot: {x: 0.28070104, y: 0.17824978}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dust_1
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 288
+        width: 114
+        height: 54
+      alignment: 9
+      pivot: {x: 0.48548487, y: 0.14760731}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dust_2
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 286
+        width: 196
+        height: 81
+      alignment: 9
+      pivot: {x: 0.44934565, y: 0.14249976}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dust_3
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 291
+        width: 222
+        height: 91
+      alignment: 9
+      pivot: {x: 0.46273172, y: 0.10905138}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dust_4
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 293
+        width: 245
+        height: 95
+      alignment: 9
+      pivot: {x: 0.48986915, y: 0.0645495}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dust_5
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 145
+        width: 269
+        height: 108
+      alignment: 9
+      pivot: {x: 0.49077296, y: 0.1476076}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dust_6
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 150
+        width: 269
+        height: 108
+      alignment: 9
+      pivot: {x: 0.5030756, y: 0.12462559}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dust_7
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 144
+        width: 294
+        height: 121
+      alignment: 9
+      pivot: {x: 0.49718595, y: 0.17179266}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dust_8
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 11
+        width: 287
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5028827, y: 0.1552684}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dust_9
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 10
+        width: 283
+        height: 124
+      alignment: 9
+      pivot: {x: 0.5263115, y: 0.13302773}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dust_10
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 11
+        width: 302
+        height: 126
+      alignment: 9
+      pivot: {x: 0.5136979, y: 0.17168397}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dust_11
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 37
+        width: 69
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
