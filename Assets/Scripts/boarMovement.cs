@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class boarMovement : MonoBehaviour {
 
@@ -7,6 +8,8 @@ public class boarMovement : MonoBehaviour {
 	public Transform PositionB;
 	public Animator animator;
 	public Rigidbody2D rigid;
+	SpriteRenderer sprite;
+
 
 	//flipping
 	float nextFlip;
@@ -25,10 +28,11 @@ public class boarMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		nextFlip = 0f;
-		flip ();
 		animator = GetComponent <Animator> ();
 		rigid = GetComponent <Rigidbody2D> ();
 		idlePosition = new Vector2 (transform.position.x, transform.position.y);
+		sprite = GetComponent <SpriteRenderer> ();
+		sprite.flipX = false;
 	}
 	
 	// Update is called once per frame
@@ -55,7 +59,8 @@ public class boarMovement : MonoBehaviour {
 
 	public void flip(){
 		//will flip the sprite
-		transform.localScale = new Vector3(transform.localScale.x *-1, transform.localScale.y, transform.localScale.z);
+		sprite.flipX = !sprite.flipX;
+//		transform.localScale = new Vector3(transform.localScale.x *-1, transform.localScale.y, transform.localScale.z);
 		facingRight = !facingRight;
 		nextFlip = Time.time + flipDelay;
 	}

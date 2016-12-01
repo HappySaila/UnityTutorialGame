@@ -46,6 +46,7 @@ public class Missle : MonoBehaviour {
 				smoke.GetComponent<ParticleSystem> ().enableEmission = false;
 				Instantiate (explosion, transform.position, transform.rotation);
 				destroyed = true;
+				Destroy (gameObject, 0.2f);
 			}
 		}
 	}

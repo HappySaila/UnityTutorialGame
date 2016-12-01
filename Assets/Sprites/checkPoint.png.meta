@@ -1,0 +1,283 @@
+fileFormatVersion: 2
+guid: 0404db075468c4ffc957d8e7ac949056
+timeCreated: 1480011707
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: checkPoint_0
+    21300002: checkPoint_1
+    21300004: checkPoint_2
+    21300006: checkPoint_3
+    21300008: checkPoint_4
+    21300010: checkPoint_5
+    21300012: checkPoint_6
+    21300014: checkPoint_7
+    21300016: checkPoint_8
+    21300018: checkPoint_9
+    21300020: checkPoint_10
+    21300022: checkPoint_11
+    21300024: checkPoint_12
+    21300026: checkPoint_13
+    21300028: checkPoint_14
+    21300030: checkPoint_15
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: checkPoint_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 322
+        width: 84
+        height: 306
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: checkPoint_1
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 322
+        width: 103
+        height: 306
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: checkPoint_2
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 322
+        width: 118
+        height: 306
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: checkPoint_3
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 322
+        width: 118
+        height: 306
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: checkPoint_4
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 322
+        width: 118
+        height: 306
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: checkPoint_5
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 322
+        width: 118
+        height: 306
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: checkPoint_6
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 322
+        width: 117
+        height: 310
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: checkPoint_7
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 322
+        width: 118
+        height: 306
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: checkPoint_8
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 4
+        width: 84
+        height: 307
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: checkPoint_9
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 4
+        width: 103
+        height: 307
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: checkPoint_10
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 4
+        width: 118
+        height: 307
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: checkPoint_11
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 4
+        width: 118
+        height: 307
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: checkPoint_12
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 4
+        width: 118
+        height: 307
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: checkPoint_13
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 4
+        width: 118
+        height: 307
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: checkPoint_14
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 4
+        width: 118
+        height: 305
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: checkPoint_15
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 4
+        width: 118
+        height: 305
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

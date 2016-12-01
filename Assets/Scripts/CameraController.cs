@@ -49,4 +49,12 @@ public class CameraController : MonoBehaviour {
 	public void setMaxCameraPosition(){
 		maxCameraPos = transform.position;
 	}
+
+	public void setTarget (GameObject target){
+		this.target = target.transform;
+	}
+
+	public void setSmooth(float smoothing){
+		this.smoothing = smoothing;
+	}
 }

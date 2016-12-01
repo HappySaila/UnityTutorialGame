@@ -9,15 +9,18 @@ public class boxPosition : MonoBehaviour {
 	public Transform PositionA;
 	public Transform PositionB;
 
+	Sounds sounds;
+
 
 	// Use this for initialization
 	void Start () {
 		collider = GetComponent <BoxCollider2D> ();
 		float boxSize = Mathf.Abs (PositionA.position.x - PositionB.position.x);
-		collider.size = new Vector2 (boxSize, 3);
+		collider.size = new Vector2 (boxSize, collider.size.y);
 		collider.offset = new Vector2 (PositionA.localPosition.x + boxSize/2, 0);
 
 		boarMovement = boar.GetComponent <boarMovement> ();
+		sounds = GameObject.Find ("GameSounds").GetComponent <Sounds>();
 	}
 	
 	// Update is called once per frame
@@ -41,6 +44,8 @@ public class boxPosition : MonoBehaviour {
 						boarMovement.flip ();
 					}
 				}
+
+				sounds.doBoarGrunt ();
 			}
 
 			boarMovement.isCharge = true;

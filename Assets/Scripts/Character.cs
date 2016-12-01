@@ -1,11 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Text;
+using UnityEngine.EventSystems;
+using System.ComponentModel;
+using UnityStandardAssets.CrossPlatformInput;
+using System.Security.Cryptography;
 
 public class Character : MonoBehaviour {
 
 	//movement
 	public float maxSpeed;
+	public float moveForce;
+	bool canMove;
+	float canMoveTime;
+
+	float nextStep;
+	public float stepDelay;
 
 	//jumping
 	public Transform groundCheckPosition;
@@ -28,30 +38,40 @@ public class Character : MonoBehaviour {
 	float yDiePosition;
 
 	//sounds
-	public GameObject Sounds;
 	Sounds sounds;
 
 	Vector3 startPosition;
+	public bool buildingMode;
+
+	//touch input movement booleans
+	public bool upPressed;
+	public bool downPressed;
+
+
 	// Use this for initialization
 	void Start () {
+		//check if there is a character in the scene
+
 		rigid = GetComponent<Rigidbody2D> ();
 		animator = GetComponent<Animator> ();
 		facingRight = true;
-		startPosition = transform.position;
 		yDiePosition = transform.position.y - 50;
-		sounds = Sounds.GetComponent <Sounds> ();
+		sounds = GameObject.Find ("GameSounds").GetComponent <Sounds> ();
+		canMove = false;
+		if (!buildingMode){
+			gameObject.SetActive (false);
+		}
 	}
+			
 
 	void Update(){
-		if (Input.GetKeyDown (KeyCode.Q)) {
-			transform.position = startPosition;
-		}
 		updateJumping ();
 		updatePosition ();
+
 	}
 
 	void updateJumping(){
-		if (grounded && Input.GetAxis ("Vertical") > 0) {
+		if (grounded && (Input.GetAxis ("Vertical") > 0 || upPressed)) {
 			//we want to jump
 			grounded = false;
 			animator.SetBool ("grounded", grounded);
@@ -60,7 +80,7 @@ public class Character : MonoBehaviour {
 		}
 
 		if (Time.time > nextdoubleJump){
-			if (Input.GetAxisRaw ("Vertical") > 0 && currentJumps < numberDoubleJumps && canDoubleJump){
+			if ((Input.GetAxis ("Vertical") > 0 || upPressed) && currentJumps < numberDoubleJumps && canDoubleJump){
 				nextdoubleJump = Time.time + doubleJumpDelay;
 				currentJumps++;
 				Jump (true);
@@ -69,7 +89,7 @@ public class Character : MonoBehaviour {
 		}
 
 		if (grounded){
-			currentJumps = 0;
+			ResetJumps ();
 		}
 
 		if (Input.GetAxisRaw ("Vertical") == 0){
@@ -103,24 +123,51 @@ public class Character : MonoBehaviour {
 		}
 	}
 		
-	
+
 	// Update is called once per frame
 	void FixedUpdate () {
-		float move = Input.GetAxisRaw ("Horizontal");
+		//sets the movement to normal input unless cross platform input detected
+		float move = (CrossPlatformInputManager.GetAxis ("Horizontal")!=0 ? 
+			CrossPlatformInputManager.GetAxisRaw ("Horizontal") : Input.GetAxisRaw ("Horizontal"));
+		
 		animator.SetFloat ("speed", Mathf.Abs(move));
 
 		if (move > 0 && !facingRight) {
-			flipSprite ();
+			flipSprite (); 
 		} else if (move < 0 && facingRight) {
 			flipSprite ();
 		}
 
-		rigid.velocity = new Vector2(move*maxSpeed, rigid.velocity.y);
+		updateMovement (move);
 
 		grounded = Physics2D.OverlapCircle (groundCheckPosition.position, 0.1f, groundLayer);
 		animator.SetFloat ("verticleSpeed", rigid.velocity.y);
 		animator.SetBool ("grounded", grounded);
+	}
 
+	void updateMovement(float move){
+		if (move>0){
+			move = 1;
+		}
+		if (canMove) {
+			if (move != 0) {
+				rigid.velocity = new Vector2 (move * maxSpeed, rigid.velocity.y);
+			} else {
+				rigid.velocity = new Vector2 (0, rigid.velocity.y);
+			}
+		} else {
+			//player can not move
+			if (Time.time > canMoveTime){
+				canMove = true;
+			}
+		}
+
+		//movement sounds
+		if (Time.time > nextStep && move!=0 && grounded){
+			nextStep = Time.time + stepDelay;
+			sounds.doFootStep ();
+			print ("Step");
+		}
 	}
 
 	void flipSprite(){
@@ -134,8 +181,44 @@ public class Character : MonoBehaviour {
 		return facingRight;
 	}
 
-	public void push(Vector3 direction, float force){
-		Vector2 forceDirection = new Vector2 (direction.x, direction.y);
-		rigid.AddForce (forceDirection*force, ForceMode2D.Impulse);
+	public void push(Vector2 direction, float force, float time){
+		rigid.AddForce (direction*force, ForceMode2D.Impulse);
+		stopMovement (time);
+		currentJumps = 0;
+		canMove = false;
 	}
+
+	public void ResetJumps(){
+		currentJumps = 0;
+	}
+
+	public void stopMovement(float timer){
+		//player can not move for x amount of time
+		canMove = false;
+		canMoveTime = timer + Time.time;
+	}
+
+	public void resetPosition(Vector2 position){
+		startPosition = position;
+	}
+
+	public void touchJump(){
+		print ("Jump");
+		upPressed = true;
+		StartCoroutine (resetJumpButton ());
+	}
+
+	IEnumerator resetJumpButton(){
+		yield return new WaitForEndOfFrame ();
+		upPressed = false;
+	}
+
+	public void touchShoot(){
+		downPressed = true;
+	}
+
+	public void releaseShoot(){
+		downPressed = false;
+	}
+
 }

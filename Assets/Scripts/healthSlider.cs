@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.Events;
-using UnityEditor;
 using UnityEngine.UI;
 
 public class healthSlider : MonoBehaviour {
@@ -38,8 +37,6 @@ public class healthSlider : MonoBehaviour {
 			tempHealth = playerHealth.currentHealth;
 			damage = true;
 			float healthRatio = 1 - ((float)playerHealth.currentHealth / playerHealth.maxHealth);
-			print (healthRatio);
-			print (currentBlood); 
 			currentBlood = new Color (1f,0f,0f,healthRatio);
 		}
 
